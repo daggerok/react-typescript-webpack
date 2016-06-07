@@ -1,0 +1,13 @@
+language:
+  - java
+  - node_js
+jdk: oraclejdk8
+node_js: 6
+script:
+  - npm i
+  - npm run wp:compile
+after_script:
+  - true & cat *.log
+cache.directories:
+  - ./node_modules
+notifications.on_failure: never # always|change|never
