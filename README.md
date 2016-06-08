@@ -4,7 +4,6 @@ react-typescript-webpack [![build](https://travis-ci.org/daggerok/react-typescri
 ```bash
 git clone --depth=1 --branch=master https://github.com/daggerok/react-typescript-webpack.git react-typescript-webpack
 cd $_
-npm i
 npm start
 ```
 
