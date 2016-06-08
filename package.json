@@ -1,12 +1,15 @@
 {
   "name": "react-typescript-webpack",
   "version": "1.0.0",
-  "description": "react-typescript-webpack [![build](https://travis-ci.org/daggerok/react-typescript-webpack.svg?branch=master)](https://travis-ci.org/daggerok/react-typescript-webpack) ========================",
+  "description": "react typescript webpack",
   "main": "./src/index.tsx",
   "scripts": {
-    "start": "npm-run-all wp:compile start-in-parallel",
-    "start-in-parallel": "npm-run-all --parallel wp:watch bs",
-    "bs": "browser-sync start --config=./config/browser-sync.js",
+    "start": "npm i && npm run wp:dev",
+    "bs": "npm-run-all wp:compile start-in-parallel",
+    "start-in-parallel": "npm-run-all --parallel wp:watch bs-server",
+    "bs-server": "browser-sync start --config=./config/browser-sync.js",
+    "wp:dev": "webpack-dev-server --config ./config/webpack.js -w --hot --inline --port 8000",
+    "wp:build": "webpack --config ./config/webpack.js -p",
     "wp:watch": "webpack --config ./config/webpack.js -w",
     "wp:compile": "webpack --config ./config/webpack.js",
     "tsc:watch": "tsc -w -p ./src",
@@ -14,7 +17,7 @@
     "postinstall": "npm-run-all typings:*",
     "typings:rm": "rimraf typings*",
     "typings:init": "typings init ./src",
-    "typings:react": "typings install --global --save dt~react dt~react-dom dt~jquery dt~bootstrap"
+    "typings:install": "typings install --global --save dt~react dt~react-dom dt~jquery"
   },
   "author": "Maksim Kostromin",
   "license": "ISC",
@@ -27,13 +30,14 @@
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
     "bootstrap": "^3.3.6",
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
   },
   "repository": {
     "type": "git",

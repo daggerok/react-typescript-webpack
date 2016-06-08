@@ -6,7 +6,8 @@ import * as ReactDOM from 'react-dom';
 
 import { Hi } from './index/main';
 
+let app: HTMLElement = document.getElementById('tsx-app');
+
 ReactDOM.render(
-  <Hi compiler="TypeScript" framework="React"/>,
-  document.getElementById('tsx-app')
+  <Hi compiler="TypeScript" framework="React"/>, app
 );

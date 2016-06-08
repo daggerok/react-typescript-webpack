@@ -7,3 +7,7 @@ cd $_
 npm i
 npm start
 ```
+
+links:
+
+- [www.typescriptlang.org](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
