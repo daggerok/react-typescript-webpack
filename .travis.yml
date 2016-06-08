@@ -1,7 +1,6 @@
 language: node_js
 node_js: 6
 script:
-  - npm i
   - npm run wp:compile
   - npm run wp:build
 after_script:
