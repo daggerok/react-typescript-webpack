@@ -4,13 +4,13 @@
 import * as React from 'react';
 import * as $ from 'jquery';
 
-export interface HiProps { compiler: string; framework: string;
+export interface HiProps {
+  compiler: string;
+  framework: string;
 }
 //'http://*/'
 export class Hi extends React.Component<HiProps, {}> {
-  public componentDidMount() {
-
-  }
+  public componentDidMount() {}
 
   public render() {
     return (

@@ -13,32 +13,30 @@
     "wp:watch": "webpack --config ./config/webpack.js -w",
     "wp:compile": "webpack --config ./config/webpack.js",
     "tsc:watch": "tsc -w -p ./src",
-    "tsc:compile": "tsc -p ./src",
-    "postinstall": "npm-run-all typings:*",
-    "typings:rm": "rimraf typings*",
-    "typings:init": "typings init ./src",
-    "typings:install": "typings install --global --save dt~react dt~react-dom dt~jquery"
+    "tsc:compile": "tsc -p ./src"
   },
   "author": "Maksim Kostromin",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "html-webpack-plugin": "^2.19.0",
-    "http-proxy-middleware": "^0.15.2",
-    "npm-run-all": "^2.1.1",
-    "rimraf": "^2.5.2",
-    "source-map-loader": "^0.1.5",
-    "ts-loader": "^0.8.2",
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "browser-sync": "2.18.5",
+    "html-webpack-plugin": "2.24.1",
+    "http-proxy-middleware": "0.17.3",
+    "npm-run-all": "3.1.2",
+    "rimraf": "2.5.4",
+    "source-map-loader": "0.1.5",
+    "ts-loader": "1.3.3",
+    "typescript": "2.1.4",
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "^2.2.4",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "@types/jquery": "2.0.34",
+    "@types/react": "0.14.55",
+    "@types/react-dom": "0.14.19",
+    "bootstrap": "3.3.7",
+    "jquery": "3.1.1",
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
   },
   "repository": {
     "type": "git",
